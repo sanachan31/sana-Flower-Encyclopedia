@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+/* =====sanaの花図鑑　全体================ */ 
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #000088;
+    font-size: 0.9rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+.site-title {
+    width: 195px;
+    line-height: 1px;
+    padding: 10px 0;
+
+}
+
+.site-title a {
+    display: block;
+}
+
+.section-title {
+    display: inline-block;
+    font-size: 2rem;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.content-title {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.wrapper {
+    max-width: 990px;
+    margin: 0 auto 100px auto;
+    padding: 0 4%;
+    text-align: center;
+}
+
+/* =====ヘッダー========================== */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 60px;
+}
+    
+#header ul {
+    display: flex;
+    padding: 10px 0;
+}
+
+#header li {
+    margin-left: 30px;    
+}
+
+#header li a {
+    color: #000088;
+}
+
+#header li a:hover {
+    opacity: 0.7;
+}
+
+#header li:nth-child(1) {
+    border-bottom: solid 2px #ff1493;
+}
+
+#header li:nth-child(2) {
+    border-bottom: solid 2px #ffd700;
+}
+
+#header li:nth-child(3) {
+    border-bottom: solid 2px #00ccff;
+}
+
+#header li:nth-child(4) {
+    border-bottom: solid 3px #f5fffa;
+}
+
+/* =====メイン画像======================== */
+#mainvisual {
+    margin-bottom: 80px;
+}
+
+#mainvisual img {
+    height: 100%;
+    width: 100%;
+    max-width: 1920px;
+    object-fit: cover;
+}
+
+#mainvisual p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+/*=====ピンク============================= */
+#pink .section-title {
+    border-bottom: solid 5px #ff1493;
+}
+
+#pink ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#pink li {
+    width: 32%;
+}
+
+#pink p {
+    font-size: 0.7rem;
+}
+
+/* =====イエロー========================== */
+#yellow .section-title {
+    border-bottom: solid 5px #ffd700;
+}
+#yellow ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#yellow li {
+    width: 32%;
+}
+
+/* =====ブルー============================ */
+#blue .section-title {
+    border-bottom: solid 5px #00ccff;
+}
+
+#blue ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#blue li {
+    width: 32%;
+}
+
+/* =====ホワイト========================== */
+#white .section-title {
+    border-bottom: solid 5px #f5fffa;
+}
+
+#white ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#white li {
+    width: 32%;
+}
+
+/* =====スマホ用メイン画像================= */
+@media screen and (max-width: 600px) {
+    #mainvisual img {
+        height: calc(100vh - 60px);
+    }
+
+/* =====スマホ用カラー==================== */
+    #pink ul, #yellow ul, #blue ul, #white ul {
+        flex-direction: column;
+    }
+
+    #pink li, #yellow li, #blue li, #white li {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* =====フッター========================= */
+footer {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.5rem;
+}
+
+#page-top {
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+}
+
+#page-top a {
+    position: relative;
+    display: block;
+    width: 90px;
+    height: 90px;
+    text-decoration: none;
+}
+
+#page-top a::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 8px;
+    color: #3f98ef;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin: -40px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+
+#page-top a::after {
+    content: 'PAGE TOP';
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    color: #3f98df;
+}
