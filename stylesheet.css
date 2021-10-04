@@ -102,7 +102,7 @@ li {
 }
 
 #mainvisual img {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     max-width: 1920px;
     object-fit: cover;
