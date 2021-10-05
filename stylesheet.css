@@ -21,6 +21,10 @@ img {
 li {
     list-style: none;
 }
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
 .site-title {
     font-size: 2rem;
     padding: 10px 0;
