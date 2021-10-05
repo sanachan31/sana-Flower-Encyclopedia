@@ -1,137 +1,128 @@
 @charset "utf-8";
 
 /* =====sanaの花図鑑　全体================ */ 
+/* #region top */
 html {
     font-size: 100%;
 }
-
 body {
     color: #000088;
     font-size: 0.9rem;
     margin: 0;
     padding: 0;
 }
-
 a {
     text-decoration: none;
+    color: #000088;
 }
-
 img {
     max-width: 100%;
 }
-
 li {
     list-style: none;
 }
-
 .site-title {
-    width: 195px;
-    line-height: 1px;
+    font-size: 2rem;
     padding: 10px 0;
-
+    white-space: nowrap;
 }
-
 .site-title a {
     display: block;
 }
-
 .section-title {
     display: inline-block;
     font-size: 2rem;
     margin-bottom: 60px;
     text-align: center;
 }
-
+.section-title:hover {
+    opacity: 0.5;
+} 
 .content-title {
     font-size: 1rem;
     margin: 10px 0;
 }
-
 .wrapper {
     max-width: 990px;
     margin: 0 auto 100px auto;
     padding: 0 4%;
     text-align: center;
 }
-
+/* #endregion top */
 /* =====ヘッダー========================== */
+/* #region */
 #header {
+    background-color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    height: 60px;
-}
-    
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    font-size: 1rem;
+}   
 #header ul {
     display: flex;
     padding: 10px 0;
 }
-
 #header li {
     margin-left: 30px;    
 }
-
 #header li a {
     color: #000088;
 }
-
 #header li a:hover {
-    opacity: 0.7;
+    opacity: 0.5;
 }
-
 #header li:nth-child(1) {
     border-bottom: solid 2px #ff1493;
 }
-
 #header li:nth-child(2) {
     border-bottom: solid 2px #ffd700;
 }
-
 #header li:nth-child(3) {
     border-bottom: solid 2px #00ccff;
 }
-
 #header li:nth-child(4) {
     border-bottom: solid 3px #f5fffa;
 }
-
+/* #endregion */
 /* =====メイン画像======================== */
+/* #region */
 #mainvisual {
     margin-bottom: 80px;
 }
-
 #mainvisual img {
-    height: 100vh;
-    width: 100%;
+    height: 100%;
+    width: 100vw;
     max-width: 1920px;
     object-fit: cover;
 }
-
 #mainvisual p {
     text-align: center;
     font-size: 1rem;
+    margin-top: 10px;
 }
-
+/* #endregion */
 /*=====ピンク============================= */
+/* #region */
 #pink .section-title {
     border-bottom: solid 5px #ff1493;
 }
-
 #pink ul {
     display: flex;
     justify-content: space-between;
 }
-
 #pink li {
     width: 32%;
 }
-
 #pink p {
     font-size: 0.7rem;
 }
-
+/* #endregion */
 /* =====イエロー========================== */
+/* #region */
 #yellow .section-title {
     border-bottom: solid 5px #ffd700;
 }
@@ -139,72 +130,52 @@ li {
     display: flex;
     justify-content: space-between;
 }
-
 #yellow li {
     width: 32%;
 }
-
+/* #endregion */
 /* =====ブルー============================ */
+/* #region */
 #blue .section-title {
     border-bottom: solid 5px #00ccff;
 }
-
 #blue ul {
     display: flex;
     justify-content: space-between;
 }
-
 #blue li {
     width: 32%;
 }
-
+/* #endregion */
 /* =====ホワイト========================== */
+/* #region */
 #white .section-title {
     border-bottom: solid 5px #f5fffa;
 }
-
 #white ul {
     display: flex;
     justify-content: space-between;
 }
-
 #white li {
     width: 32%;
 }
-
-/* =====スマホ用メイン画像================= */
-@media screen and (max-width: 600px) {
-    #mainvisual img {
-        height: calc(100vh - 60px);
-    }
-
-/* =====スマホ用カラー==================== */
-    #pink ul, #yellow ul, #blue ul, #white ul {
-        flex-direction: column;
-    }
-
-    #pink li, #yellow li, #blue li, #white li {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-}
-
+/* #endregion */
 /* =====フッター========================= */
+/* #region */
 footer {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     font-size: 0.5rem;
 }
-
 #page-top {
     width: 90px;
     height: 90px;
     position: fixed;
-    right: 0;
-    bottom: 0;
+    right: 10px;
+    bottom: 30px;
+    z-index: 100;
     opacity: 0.6;
 }
-
 #page-top a {
     position: relative;
     display: block;
@@ -212,13 +183,12 @@ footer {
     height: 90px;
     text-decoration: none;
 }
-
 #page-top a::before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: '\f102';
     font-size: 8px;
-    color: #3f98ef;
+    color: #000088;
     position: absolute;
     width: 25px;
     height: 25px;
@@ -229,11 +199,9 @@ footer {
     margin: auto;
     text-align: center;
 }
-
 #page-top a::after {
     content: 'PAGE TOP';
     font-size: 13px;
-    color: #fff;
     position: absolute;
     top: 45px;
     right: 0;
@@ -241,5 +209,41 @@ footer {
     left: 0;
     margin: auto;
     text-align: center;
-    color: #3f98df;
+    color: #000088;
+}
+/* #endregion */
+/*======================================
+    スマホ用メイン画像
+=======================================*/
+@media screen and (max-width: 600px) {
+    .site-title {
+        font-size: 1.5rem;
+        width: 165px;
+        margin: 0 auto;
+    }
+/* =====スマホ用ヘッダー==================== */
+    #header {
+        display: block;
+        margin: 10px auto;
+        position: initial;
+    }
+    #header ul {
+        justify-content: center;
+    }
+/* =====スマホ用メインヴィジュアル=========== */
+    #mainvisual img {
+        height: 100vh;
+    }
+    #mainvisual p {
+        display: block;
+        padding: 0 7%;
+    }
+/* =====スマホ用カラー==================== */
+    #pink ul, #yellow ul, #blue ul, #white ul {
+        flex-direction: column;
+    }
+    #pink li, #yellow li, #blue li, #white li {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
