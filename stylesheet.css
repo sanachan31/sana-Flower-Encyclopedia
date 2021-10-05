@@ -18,8 +18,10 @@ a {
 img {
     max-width: 100%;
 }
-li {
+ul,li {
     list-style: none;
+    padding:0;
+    matgin: 0;
 }
 h1, h2, h3 {
     margin: 0;
